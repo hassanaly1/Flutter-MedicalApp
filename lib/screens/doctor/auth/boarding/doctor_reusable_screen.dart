@@ -33,7 +33,7 @@ class _DoctorReUsableBoardingScreenState
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(height: Get.height * 0.02),
-              CustomTextWidget(
+              DoctorCustomTextWidget(
                 text: widget.text,
                 fontSize: 22,
                 fontWeight: FontWeight.w700,
@@ -46,7 +46,7 @@ class _DoctorReUsableBoardingScreenState
                 height: 300,
               ),
               SizedBox(height: Get.height * 0.1),
-              CustomTextWidget(
+              DoctorCustomTextWidget(
                 text: widget.subText,
                 fontSize: 16,
                 fontWeight: FontWeight.w500,

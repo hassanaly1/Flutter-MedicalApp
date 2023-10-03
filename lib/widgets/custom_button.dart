@@ -41,3 +41,34 @@ class CustomButton extends StatelessWidget {
     );
   }
 }
+
+class DoctorCustomButton extends StatelessWidget {
+  final String buttonText;
+  final VoidCallback onTap;
+  const DoctorCustomButton({
+    super.key,
+    required this.buttonText,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        height: 50,
+        width: double.infinity,
+        color: AppColors.primaryColor,
+        child: Center(
+          child: DoctorCustomTextWidget(
+            text: buttonText,
+            textAlign: TextAlign.center,
+            textColor: Colors.white,
+            fontSize: 22,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ),
+    );
+  }
+}

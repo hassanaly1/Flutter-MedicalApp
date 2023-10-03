@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medical_app/constants/colors.dart';
-import 'package:medical_app/screens/patient/auth/boarding/boarding_screen.dart';
+import 'package:medical_app/screens/doctor/doctor_splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
         useMaterial3: true,
       ),
-      home: const BoardingScreen(),
+      home: const DoctorSplashScreen(),
     );
   }
 }

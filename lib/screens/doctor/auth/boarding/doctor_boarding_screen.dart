@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:medical_app/constants/colors.dart';
+import 'package:medical_app/screens/doctor/auth/auth/doctor_login_screen.dart';
 import 'package:medical_app/screens/doctor/auth/boarding/doctor_reusable_screen.dart';
-import 'package:medical_app/widgets/custom_text_widget.dart';
+import 'package:medical_app/widgets/custom_button.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class DoctorBoardingScreen extends StatefulWidget {
@@ -65,19 +66,12 @@ class _DoctorBoardingScreenState extends State<DoctorBoardingScreen> {
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Container(
-                      height: 50,
-                      width: double.infinity,
-                      color: AppColors.primaryColor,
-                      child: const Center(
-                        child: CustomTextWidget(
-                          text: 'Get Started',
-                          textAlign: TextAlign.center,
-                          textColor: Colors.white,
-                          fontSize: 22,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
+                    child: DoctorCustomButton(
+                      buttonText: 'Get Started',
+                      onTap: () {
+                        Get.to(const DriverLoginScreen(),
+                            transition: Transition.rightToLeftWithFade);
+                      },
                     ),
                   ),
                   const SizedBox(
