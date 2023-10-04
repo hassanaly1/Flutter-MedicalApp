@@ -3,12 +3,14 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medical_app/constants/colors.dart';
+import 'package:medical_app/screens/doctor/auth/auth/doctor_forgetpassword_screen.dart';
+import 'package:medical_app/screens/doctor/auth/auth/doctor_signup_screen.dart';
 import 'package:medical_app/widgets/custom_button.dart';
 import 'package:medical_app/widgets/custom_text_widget.dart';
 import 'package:medical_app/widgets/custom_textfield.dart';
 
-class DriverLoginScreen extends StatelessWidget {
-  const DriverLoginScreen({super.key});
+class DoctorLoginScreen extends StatelessWidget {
+  const DoctorLoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,7 @@ class DriverLoginScreen extends StatelessWidget {
             children: [
               const DoctorCustomTextWidget(
                 text: 'Welcome Back!',
-                fontSize: 32,
+                fontSize: 35,
                 fontWeight: FontWeight.w700,
                 textAlign: TextAlign.center,
                 textColor: AppColors.primaryColor,
@@ -42,14 +44,15 @@ class DriverLoginScreen extends StatelessWidget {
               ),
               SizedBox(height: Get.height * 0.02),
               const DoctorCustomTextField(
+                obscureText: true,
                 hintText: 'Password',
                 suffixIcon: Icons.remove_red_eye_sharp,
               ),
               SizedBox(height: Get.height * 0.03),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
+                  const Row(
                     children: [
                       Icon(
                         Icons.check_box,
@@ -64,12 +67,17 @@ class DriverLoginScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  DoctorCustomTextWidget(
-                    text: 'Forgot password?',
-                    fontWeight: FontWeight.w500,
-                    fontSize: 16.0,
-                    textColor: AppColors.primaryColor,
-                  )
+                  TextButton(
+                      onPressed: () {
+                        Get.to(const DoctorForgetPasswordScreen(),
+                            transition: Transition.rightToLeft);
+                      },
+                      child: const DoctorCustomTextWidget(
+                        text: 'Forgot password?',
+                        fontWeight: FontWeight.w500,
+                        fontSize: 16.0,
+                        textColor: AppColors.primaryColor,
+                      ))
                 ],
               ),
               SizedBox(height: Get.height * 0.03),
@@ -80,7 +88,8 @@ class DriverLoginScreen extends StatelessWidget {
               SizedBox(height: Get.height * 0.02),
               InkWell(
                 onTap: () {
-                  // Get.to(const SignUpScreen(), transition: Transition.downToUp);
+                  Get.to(const DoctorSignupScreen(),
+                      transition: Transition.downToUp);
                 },
                 child: RichText(
                   textAlign: TextAlign.center,

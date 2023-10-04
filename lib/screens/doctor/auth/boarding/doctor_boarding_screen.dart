@@ -69,7 +69,7 @@ class _DoctorBoardingScreenState extends State<DoctorBoardingScreen> {
                     child: DoctorCustomButton(
                       buttonText: 'Get Started',
                       onTap: () {
-                        Get.to(const DriverLoginScreen(),
+                        Get.to(const DoctorLoginScreen(),
                             transition: Transition.rightToLeftWithFade);
                       },
                     ),

@@ -7,7 +7,7 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: customAppBarWidget(title: 'Profile'),
+      appBar: CustomAppBarWidget(title: 'Profile'),
     );
   }
 }

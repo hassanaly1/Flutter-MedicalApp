@@ -7,7 +7,7 @@ class Health extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: customAppBarWidget(title: 'Health'),
+      appBar: CustomAppBarWidget(title: 'Health'),
     );
   }
 }

@@ -42,6 +42,8 @@ dependencies:
   fluentui_system_icons: ^1.1.217
   smooth_page_indicator: ^1.1.0
   video_player: ^2.7.2
+  fl_country_code_picker: ^0.1.5
+  country_code_picker: ^3.0.0
 
 dev_dependencies:
   flutter_test:

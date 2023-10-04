@@ -18,7 +18,7 @@ class _NewPasswordScreenState extends State<NewPasswordScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: customAppBarWidget(title: ''),
+      appBar: CustomAppBarWidget(title: ''),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 40.0),
         child: Column(

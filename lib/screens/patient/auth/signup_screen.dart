@@ -21,7 +21,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: customAppBarWidget(title: 'Sign Up'),
+      appBar: CustomAppBarWidget(title: 'Sign Up'),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 40.0),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:medical_app/constants/colors.dart';
 
 class CustomTextWidget extends StatelessWidget {
   final String text;
@@ -51,7 +52,7 @@ class DoctorCustomTextWidget extends StatelessWidget {
       style: GoogleFonts.nunitoSans(
         fontSize: fontSize ?? 14,
         fontWeight: fontWeight ?? FontWeight.w300,
-        color: textColor ?? Colors.black,
+        color: textColor ?? AppColors.primaryColor,
       ),
     );
   }

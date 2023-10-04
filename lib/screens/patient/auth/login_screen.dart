@@ -22,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: customAppBarWidget(title: 'Login'),
+      appBar: CustomAppBarWidget(title: 'Login'),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 40.0),
